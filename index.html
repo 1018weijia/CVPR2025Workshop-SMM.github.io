@@ -235,9 +235,20 @@
 
 
 			<div class="video-container">
-				<iframe style='width: 600px;height: 338px;' frameborder='no' allowfullscreen mozallowfullscreen
+				<!-- <iframe style='width: 600px;height: 338px;' frameborder='no' allowfullscreen mozallowfullscreen
 					webkitallowfullscreen
-					src='http://go.plvideo.cn/front/video/preview?vid=t1c133894e5a67a12c7d237320cab33f_t'></iframe>
+					src='http://go.plvideo.cn/front/video/preview?vid=t1c133894e5a67a12c7d237320cab33f_t'></iframe> -->
+				<script src='//player.polyv.net/resp/vod-player/latest/player.js'></script>
+				<div id='plv_t1c133894e5a67a12c7d237320cab33f_t'></div>
+				<script>
+					var player = polyvPlayer({
+						'wrap': '#plv_t1c133894e5a67a12c7d237320cab33f_t',
+						'width': '600',
+						'height': '338',
+						'vid': 't1c133894e5a67a12c7d237320cab33f_t',
+						'playsafe': '' // 播放加密视频的凭证, 取值参考文档: https://help.polyv.net/index.html#/vod/api/playsafe/token/create_token 
+					});
+				</script>
 			</div>
 			<p style="text-align:center">
 				Vedio2: Two Go2 collaborate to grab a bottle of beverage and interact with humans during the process<br>
@@ -269,7 +280,6 @@
 				dialogue to improve the efficiency and success rate of task completion.
 			</p>
 
-
 			</p>
 
 		</section>
@@ -296,7 +306,6 @@
 					<source src="https://www.bilibili.com/video/BV1KbPdeKE1K?t=3.0" type="video/mp4">
 				</video> -->
 
-
 				<div style="margin-top: 10px;">
 					<a href="https://github.com/pzhren/InfiniteWorld"
 						style="display: block; color: blue; text-decoration: none;">SMM</a><br>
@@ -321,12 +330,6 @@
 			delays, we plan to provide smaller, simplified versions of the datasets to ensure participants can begin
 			their work on time.
 			<br>
-			<!-- If the number of participants in the pre-registration phase exceeds expectations, we will consider
-			conducting the first round of the competition on the RoboTwin simulation platform. The top-performing teams
-			will advance to the final round, which will be held in real-world environments.
-			<br>
-			<i style="color: red">Detailed competition rules and procedures will be announced during the online briefing
-				session.</i> -->
 
 			<h4>Ethical considerations</h4>
 			<div style="margin-top: -10px"></div>
@@ -357,258 +360,12 @@
 			Xiwen Liang (Sun Yat-sen University).
 			<br>
 
-
-
-
-			<!-- <div style="margin-top: 20px"></div>
-			<hr>
-			<div style="margin-top: -10px"></div>
-			<h3>Track 2: Tactile Manipulation</h3>
-			<div
-				style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
-				<video autoplay loop muted style="width: 30%;">
-					<source src="./files/robotwin/tactile.mp4" type="video/mp4">
-				</video>
-				<div style="margin-top: 10px;">
-					<a href="https://github.com/TianxingChen/RoboTwin"
-						style="display: block; color: blue; text-decoration: none;">RoboTwin 2.0</a><br>
-				</div>
-			</div>
-			<div style="margin-top: -40px"></div>
-			<h4>Task Overview</h4>
-			<div style="margin-top: -10px"></div>
-			Tactile manipulation involves using tactile feedback and fine motor skills to handle objects with precision.
-			In this track, participants are required to design systems capable of interpreting tactile data and adapting
-			manipulation policies accordingly. This track emphasizes the critical role of tactile feedback in achieving
-			robust and reliable manipulation, especially in scenarios where visual information is unreliable.
-			<h4>Evaluation</h4>
-			<div style="margin-top: -10px"></div>
-			Participants will be provided with expert data collected from real robots (Tac-Pika), along with
-			corresponding RoboTwin-based simulation data as joint expert data. Algorithms must be trained exclusively on
-			the provided data, and higher scores will be awarded based on their performance in real-world scenarios.
-			<br>
-			<i style="color: red">Detailed competition rules and procedures will be announced during the online briefing
-				session.</i> -->
-
-
-
 			<div style="margin-top: 20px"></div>
 			<hr>
 			<div style="margin-top: 30px"></div>
 
-			<!-- Platforms -->
-			<!-- <section class="details" style="text-align: justify;">
-				<div style="display: flex; flex-direction: column; align-items: center; width: 100%; height: 100%;">
-					<h2>Platforms</h2>
-				</div>
-				<div style="height: 20px;"></div>
-				<hr>
-				<div
-					style="display: flex; justify-content: space-between; align-items: center; justify-content: center; text-align: center; margin-top: 20px;">
-					<div style="display: flex; justify-content: space-between;">
-						<div
-							style="height: 200px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
-							<video autoplay loop muted style="height: 100%;">
-								<source src="./files/platform/RoboTwin.mp4" type="video/mp4">
-								Your browser does not support the video tag.
-							</video>
-							<div style="margin-top: 10px;">
-								Simulation Benchmark Platform<br>
-								<a href="https://github.com/TianxingChen/RoboTwin"
-									style="display: block; color: blue; text-decoration: none;">RoboTwin</a>
-							</div>
-						</div>
-						<div
-							style="height: 200px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
-							<img src="./files/platform/cobot-magic-removebg-preview.png" style="height: 100%;"
-								alt="Cobot-Magic Platform">
-							<div style="margin-top: 10px;">
-								Hardware Platform<br>
-								<a href="https://global.agilex.ai/products/cobot-magic"
-									style="display: block; color: blue; text-decoration: none;">Cobot-Magic (from
-									AgileX)</a>
-							</div>
-						</div>
-						<div
-							style="height: 200px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
-							<img src="./files/platform/D-Robotics.jpg" style="height: 100%;" alt="Cobot-Magic Platform">
-							<div style="margin-top: 10px;">
-								Cloud Platform<br><a href="https://global.agilex.ai/products/cobot-magic"
-									style="display: block; color: blue; text-decoration: none;">From D-Robotics</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section> -->
-
-			<!-- Important Timeline -->
 			<div style="margin-top: 60px;">
-
-				<!-- <section class="details" style="text-align: justify;">
-					<div
-						style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; height: 100%;">
-						<h2>Important Dates</h2>
-						<table style="table-layout: fixed; width: 70%; border-collapse: collapse;">
-							<tr>
-								<th style="width: 70%;">Event</th>
-								<th style="width: 30%;">Date and Time</th>
-								<th style="width: 33.33%;">Time Remaining</th>
-							</tr>
-							<tr>
-								<td>Pre-Registration Deadline</td>
-								<td>Mar. 14 00:00 UTC+8</td>
-								<td style="color: #666;"></td>
-							</tr>
-							<tr>
-								<td>Online Briefing Time</td>
-								<td>Please notice your Email.</td>
-								<td style="color: #666;"></td>
-							</tr>
-							<tr>
-								<td>Registration Deadline</td>
-								<td>Apr. 16 00:00 UTC+8</td>
-								<td style="color: #666;"></td>
-							</tr>
-							<tr>
-								<td>Code and Checkpoint Submission Deadline</td>
-								<td>May 16 00:00 UTC+8</td>
-								<td style="color: #666;"></td>
-							</tr>
-							<tr>
-								<td>On-site Competition</td>
-								<td>Jun. 11 - Jun. 15</td>
-								<td style="color: #666;"></td>
-							</tr>
-						</table>
-					</div>
-				</section> -->
-
-				<!-- Organizer -->
-				<!-- <section id="organizers">
-					<a class="anchor" id="organizer"></a>
-					<section class="details" style="text-align: justify; margin-top: 20px;">
-						<div
-							style="display: flex; flex-direction: column; align-items: center; width: 100%; height: 100%;">
-							<h2>Organizers</h2>
-						</div>
-						<div class="grid" style="max-width: 90%">
-							<div class="speaker">
-								<figure>
-									<img src="files/organizers/yaomu.jpg" />
-									<figcaption><b><a href="https://yaomarkmu.github.io/">Yao Mu</a></b><br />The
-										University of Hong Kong</figcaption>
-								</figure>
-							</div>
-							<div class="speaker">
-								<figure>
-									<img src="files/organizers/tianxingchen.jpg" />
-									<figcaption><b><a href="http://tianxingchen.github.io">Tianxing
-												Chen</a></b><br />The University of Hong Kong</figcaption>
-								</figure>
-							</div>
-							<div class="speaker">
-								<figure>
-									<img src="files/organizers/pingluo.jpg" />
-									<figcaption><b><a href="http://luoping.me/">Ping Luo</a></b><br />The University of
-										Hong Kong</figcaption>
-								</figure>
-							</div>
-							<div class="speaker">
-								<figure>
-									<img src="files/organizers/xiaokangyang.jpg" />
-									<figcaption><b><a
-												href="https://english.seiee.sjtu.edu.cn/english/detail/842_802.htm">Xiaokang
-												Yang</a></b><br />Shanghai Jiao Tong University</figcaption>
-								</figure>
-							</div>
-							<div class="speaker">
-								<figure>
-									<img src="files/organizers/mac_schwager.jpg" />
-									<figcaption><b><a href="https://web.stanford.edu/~schwager/">Mac
-												Schwager</a></b><br />Nvidia & Stanford University</figcaption>
-								</figure>
-							</div>
-							<div class="speaker">
-								<figure>
-									<img src="files/organizers/dandanzhang.jpg" />
-									<figcaption><b><a href="https://www.intelligentrobotics-acrossscales.com/">Dandan
-												Zhang</a></b><br />Imperial College London</figcaption>
-								</figure>
-							</div>
-							<div class="speaker">
-								<figure>
-									<img src="files/organizers/zhiqiangxie.png" />
-									<figcaption><b><a href="">Zhiqiang Xie</a></b><br />AgileX Robotics</figcaption>
-								</figure>
-							</div>
-							<div class="speaker">
-								<figure>
-									<img src="files/organizers/yusenqin.jpg" />
-									<figcaption><b><a href="">Yusen Qin</a></b><br />D-Robotics</figcaption>
-								</figure>
-							</div>
-							<div class="speaker">
-								<figure>
-									<img src="files/organizers/mingyuding.png" />
-									<figcaption><b><a href="https://dingmyu.github.io/">Mingyu
-												Ding</a></b><br />UNC-Chapel Hill</figcaption>
-								</figure>
-							</div>
-							<div class="speaker">
-								<figure>
-									<img src="files/organizers/zanxinchen.jpg" />
-									<figcaption><b><a href="">Zanxin Chen</a></b><br />Shenzhen University</figcaption>
-								</figure>
-							</div>
-						</div>
-					</section> -->
-
-				<!-- Contact -->
-				<!-- <section class="details" style="text-align: justify;">
-					<div style="display: flex; flex-direction: column; align-items: center; width: 100%; height: 100%;">
-						<h2>Contact</h2>
-						<table style="table-layout: fixed; width: 70; border-collapse: collapse;">
-							<tr>
-								<td style="width: 70%;">People</th>
-								<th style="width: 30%;">Email</th>
-							</tr>
-							<tr>
-								<td style="width: 60%"><b>📮 Challenge Process</b></td>
-								<td><a href="mailto:robotwinbenchmark@gmail.com">robotwinbenchmark@gmail.com</a>
-								</td>
-								<td style="color: #666;"></td>
-							</tr>
-							<tr>
-								<td>Technical Support 1, Yao Mu, HKU</td>
-								<td><a href="mailto:muyao@connect.hku.hk">muyao@connect.hku.hk</a></td>
-								<td style="color: #666;"></td>
-							</tr>
-							<tr>
-								<td>Technical Support 2, Tianxing Chen, HKU</td>
-								<td><a href="mailto:chentianxing2002@gmail.com">chentianxing2002@gmail.com</a></td>
-								<td style="color: #666;"></td>
-							</tr>
-						</table>
-					</div>
-				</section> -->
-
 				<div style="height: 30px;"></div>
-
-				<!-- <p>
-					<center>
-						<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-						<span id="busuanzi_container_site_pv"><span id="busuanzi_value_site_pv"
-								style="color: red;"></span> Total Pageviews, since Apr.2024
-					</center>
-				</p>
-				<a style="color: black; font-size: small;"><i>Latest updated in Feb. 2025</i></a>
-				<p></p>
-				<center> © RoboTwin <a href="https://hits.seeyoufarm.com"><img
-							src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=http%3A%2F%2Frobotwin-benchmark.github.io%2Fcvpr-2025-challenge&count_bg=%23B842ED&title_bg=%2338ED6B&icon=&icon_color=%23E7E7E7&title=Viewers&edge_flat=false" /></a>
-				</center>
-				<p></p> -->
-
-
 			</div>
 
 			<div class="jvectormap-tip"></div>
