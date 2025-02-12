@@ -198,9 +198,21 @@
 					href="">Rednote</a> -->
 
 			<div class="=" video-container>
-				<iframe style='width: 600px;height: 338px' frameborder='no' allowfullscreen mozallowfullscreen
+				<!-- <iframe style='width: 600px;height: 338px' frameborder='no' allowfullscreen mozallowfullscreen
 					webkitallowfullscreen
-					src='http://go.plvideo.cn/front/video/preview?vid=t1c133894e726cf17eb9313d4d98346d_t'></iframe>
+					src='http://go.plvideo.cn/front/video/preview?vid=t1c133894e726cf17eb9313d4d98346d_t'></iframe> -->
+				<script src='//player.polyv.net/resp/vod-player/latest/player.js'></script>
+				<div id='plv_t1c133894e726cf17eb9313d4d98346d_t'></div>
+				<script>
+					var player = polyvPlayer({
+						'wrap': '#plv_t1c133894e726cf17eb9313d4d98346d_t',
+						'width': '600',
+						'height': '600',
+						'vid': 't1c133894e726cf17eb9313d4d98346d_t',
+						'playsafe': '' // 播放加密视频的凭证, 取值参考文档: https://help.polyv.net/index.html#/vod/api/playsafe/token/create_token 
+					});
+				</script>
+
 			</div>
 			<p style="text-align:center">
 				Vedio1: Two Stretch collaborate to build the scene graph<br>
