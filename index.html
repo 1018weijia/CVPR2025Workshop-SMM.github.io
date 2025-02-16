@@ -184,9 +184,58 @@
 				capabilities in areas like human intention reasoning, long-term task planning, and effective social
 				interaction between embodied agents.<br>
 				<img src="imgs/asset.png" alt="Background Image" style="width: 100%; height: auto; display: block;">
-
+			</p>
+			<p class="abstract" style="font-family: 'Times New Roman', Arial; text-align: center;">
 				Figure 1: The dynamic interaction environment that agents will navigate in both human-robot and
 				robot-robot tasks.<br>
+			</p>
+
+			<p class="abstract" style="font-family: 'Times New Roman', Arial; text-align: center;">
+			<h3>Baseline</h3>
+			</p>
+			<p class="abstract" style="font-family: 'Times New Roman', Arial; text-align: left;">
+				<strong> Instruction Following: </strong> <br>Based on a large language model (LLM) and prompt
+				engineering,
+				we decompose natural language instructions into action interfaces that can be executed by embodied
+				agent, guiding it step by step to complete tasks.<br>
+
+				<strong> VLMZero-Shot: </strong> <br>By inputting the global scene information and current observations
+				into a vision-language model (VLM),we use prompt engineering to output the actions that the agent should
+				execute.<br>
+
+				<strong> Single Semantic Map:</strong><br>Goal-Oriented Semantic Exploration for 2D semantic
+				mapping,while
+				employing the FBE algorithm as the
+				global planner incombination with the FMM planning algorithm for local planning.<br>
+
+				<strong> Random: </strong><br>In the robot's action space, actions are randomly sampled for execution,
+				or
+				target points are randomly sampled in the planning space, and planning algorithms are used to solve for
+				them.<br>
+
+				<strong> LLM-Based Planning: </strong><br>Using the Co-NavGPT,we employ a large language model (LLM) as
+				a
+				planner for multi-agent systems.The merged observation map of the agents is converted intoa textual
+				description,which is then processed by the LLM to perform goal planning for multiple agents.<br>
+
+				<strong>LLM-Planner </strong> <br>is a few-shot grounded planning model.Different from common planning
+				models,LLM Planner uses LLMs to generate plans directly instead of ranking acceptable skills, reducing
+				the need for sufficient prior knowledge of the environment and the number of calls to LLMs.Re-planning
+				of LLM-Planner allow sit to dynamically adjust the planning based on current observations,resulting in
+				more informed plans.
+
+			</p>
+
+
+
+
+
+
+
+
+
+
+
 
 
 			<div class="video-container">
